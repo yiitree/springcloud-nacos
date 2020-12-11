@@ -1,0 +1,14 @@
+server:
+  port: 8777
+
+spring:
+  application:
+    name: zimug-server-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.60:8848
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml
+        group: ZIMUG_GROUP  #配置分组，默认分组是DEFAULT_GROUP

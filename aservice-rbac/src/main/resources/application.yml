@@ -1,0 +1,69 @@
+server:
+  port: 8401
+
+spring:
+  application:
+    name: aservice-rbac
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    url: jdbc:mysql://123.56.169.21:3306/linnadb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: linna
+    password: d%r2Tz08
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # ribbon的重试机制
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+    # nacos服务发现
+    nacos:
+      discovery:
+        server-addr: 192.168.1.60:8848
+    # sentinel流量监控
+    sentinel:
+      transport:
+        # 指定应用与Sentinel控制台交互的端口
+        port: 8719
+        dashboard: 192.168.1.60:8774
+#        dashboard: 192.168.1.66:8080
+
+# debug: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 饥饿加载
+# 在启动的时候就会去加载Ribbon Client及被调用服务上下文，从而在实际发送请求的时候就可以直接使用，从而提高第一次服务请求的访问速
+ribbon:
+  eager-load:
+    enabled: true   #开启饥饿加载
+    clients: aservice-sms  #饥饿加载的服务
+
+# 配置日志等级 Feign客户端的DEBUG日志
+logging:
+  level:
+    com.zr.aservice.rbac.feign.SmsService: debug
+
+# 设置feign的客户端
+feign:
+  okhttp:
+    enabled: true
+  # 远程调用中限流打开
+  sentinel:
+    enabled: true
+
+user:
+  init:
+    password: 666666
+
+# 自定义权限管理
+zimug:
+  security:
+    csrfDisabled: true
+    devOpeningURI:
+      - /sysuser/info    # 服务开发阶段不想去配置数据库用户、角色、权限。临时开放接口访问
+    permitAllURI:
+      - /xxxx/yyyy   #公开访问的接口

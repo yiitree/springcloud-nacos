@@ -1,0 +1,37 @@
+server:
+  port: 8402
+
+spring:
+  application:
+    name: aservice-sms
+  # ribbon的重试机制
+  cloud:
+#    loadbalancer:
+#      retry:
+#        enabled: true
+    # nacos服务发现
+    nacos:
+      discovery:
+        server-addr: 192.168.1.60:8848
+    # sentinel流量监控
+    sentinel:
+      transport:
+        # 指定应用与Sentinel控制台交互的端口
+        port: 8719
+        dashboard: 192.168.1.60:8774
+#        dashboard: 192.168.1.66:8080
+
+
+## eureka配置
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://root:root@peer1:8761/eureka/eureka/,http://root:root@peer2:8761/eureka/eureka/,http://root:root@peer3:8761/eureka/eureka/
+#  # 心跳检测检测与续约时间
+#  # 测试时将值设置设置小些，保证服务关闭后注册中心能及时踢出服务
+#  instance:
+#    # 每间隔5s，向服务端发送一次心跳，证明自己依然”存活“。
+#    lease-renewal-interval-in-seconds: 5  #默认30秒
+#    # 告诉服务端，如果我10s之内没有给你发心跳，就代表我“死”了，请将我踢掉。
+#    lease-expiration-duration-in-seconds: 10   #默认90秒
+

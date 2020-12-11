@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: aservice-sms
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.60:8848
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        file-extension: yaml   #注意是yaml，不是yml
+        group: ZIMUG_GROUP
