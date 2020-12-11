@@ -5,9 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
-@SpringBootApplication(scanBasePackages={"com.zr"})
-// 启动eureka客户端
-//@EnableEurekaClient
+@SpringBootApplication(scanBasePackages={"com.zr.common"})
 // 服务发现，通用方式，其他注册中心也可以用
 @EnableDiscoveryClient
 public class AserviceSmsApplication {

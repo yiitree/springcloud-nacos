@@ -27,7 +27,6 @@ spring:
         # 指定应用与Sentinel控制台交互的端口
         port: 8719
         dashboard: 192.168.1.60:8774
-#        dashboard: 192.168.1.66:8080
 
 # debug: true
 mybatis:

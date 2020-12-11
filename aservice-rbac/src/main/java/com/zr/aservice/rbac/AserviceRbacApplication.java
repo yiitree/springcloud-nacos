@@ -12,7 +12,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication(
-        scanBasePackages={"com.zr.dao"},
+        scanBasePackages={"com.zr.common","com.zr.dao"},
         exclude = {SecurityAutoConfiguration.class}
 )
 @MapperScan(basePackages = {"com.zr.dao.**.mapper"})
