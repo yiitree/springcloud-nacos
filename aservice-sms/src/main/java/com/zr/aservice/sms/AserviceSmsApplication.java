@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
-@SpringBootApplication(scanBasePackages={"com.zr.common"})
+@SpringBootApplication(scanBasePackages={"com.zr.aservice.sms"})
 // 服务发现，通用方式，其他注册中心也可以用
 @EnableDiscoveryClient
 public class AserviceSmsApplication {

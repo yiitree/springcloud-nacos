@@ -8,8 +8,7 @@ public class CustomException extends RuntimeException {
 
     private CustomException(){}
 
-    public CustomException(CustomExceptionType exceptionTypeEnum,
-                           String message) {
+    public CustomException(CustomExceptionType exceptionTypeEnum, String message) {
         this.code = exceptionTypeEnum.getCode();
         this.message = message;
     }
