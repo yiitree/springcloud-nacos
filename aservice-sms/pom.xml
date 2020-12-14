@@ -9,11 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <groupId>com.zr.sms</groupId>
     <artifactId>aservice-sms</artifactId>
+    <version>1.0</version>
 
     <dependencies>
         <dependency>
-            <groupId>com.zr</groupId>
+            <groupId>com.zr.common</groupId>
             <artifactId>component-common</artifactId>
         </dependency>
 

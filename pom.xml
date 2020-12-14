@@ -28,21 +28,22 @@
 
     <dependencyManagement>
         <dependencies>
+
             <!-- 通用模块（内部模块） -->
             <dependency>
-                <groupId>com.zr</groupId>
+                <groupId>com.zr.common</groupId>
                 <artifactId>component-common</artifactId>
                 <version>1.0</version>
             </dependency>
             <!-- 持久层模块（内部模块） -->
             <dependency>
-                <groupId>com.zr</groupId>
+                <groupId>com.zr.dao</groupId>
                 <artifactId>component-dao</artifactId>
                 <version>1.0</version>
             </dependency>
             <!-- 权限管理（内部模块） -->
             <dependency>
-                <groupId>com.zr</groupId>
+                <groupId>com.zr.security</groupId>
                 <artifactId>component-security</artifactId>
                 <version>1.0</version>
             </dependency>
@@ -56,11 +57,20 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- spring依赖 -->
+            <!-- springboot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
                 <version>2.2.5.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- nacos -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.2.1.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -81,17 +91,7 @@
                 <version>1.2.10</version>
             </dependency>
 
-            <!-- 在父项目中加入alibaba项目版本管理依赖 nacos -->
-            <dependency>
-                <groupId>com.alibaba.cloud</groupId>
-                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.2.1.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
         </dependencies>
-
     </dependencyManagement>
 
 </project>

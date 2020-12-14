@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zr</groupId>
+    <groupId>com.zr.security</groupId>
     <artifactId>component-security</artifactId>
     <version>1.0</version>
 

@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
         scanBasePackages={"com.zr.aservice.rbac"},
         exclude = {SecurityAutoConfiguration.class}
 )
-@MapperScan(basePackages = {"com.zr.aservice.**"})
+@MapperScan(basePackages = {"com.zr.dao.**"})
 // 服务发现，通用方式，其他注册中心也可以用
 @EnableDiscoveryClient
 // 开启openFeign远程调用
