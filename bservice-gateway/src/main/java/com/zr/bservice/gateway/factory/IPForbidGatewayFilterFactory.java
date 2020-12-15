@@ -1,4 +1,4 @@
-package com.zr.bservice.gateway;
+package com.zr.bservice.gateway.factory;
 
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;

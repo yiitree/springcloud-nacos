@@ -24,12 +24,11 @@
             <groupId>com.zr.dao</groupId>
             <artifactId>component-dao</artifactId>
         </dependency>
-
         <!-- 微服务内部的权限管理 -->
-<!--        <dependency>-->
-<!--            <groupId>com.zr</groupId>-->
-<!--            <artifactId>component-security</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.zr.security</groupId>
+            <artifactId>component-security</artifactId>
+        </dependency>
 
         <!-- web -->
         <dependency>

@@ -65,6 +65,6 @@ zimug:
   security:
     csrfDisabled: true
     devOpeningURI:
-      - /sysuser/info    # 服务开发阶段不想去配置数据库用户、角色、权限。临时开放接口访问
+      - /sysuser/info # 服务开发阶段不想去配置数据库用户、角色、权限。临时开放接口访问
     permitAllURI:
       - /xxxx/yyyy   #公开访问的接口

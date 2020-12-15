@@ -1,4 +1,4 @@
-package com.zr.bservice.gateway;
+package com.zr.bservice.gateway.factory;
 
 import org.springframework.cloud.gateway.handler.predicate.AbstractRoutePredicateFactory;
 import org.springframework.stereotype.Component;
@@ -7,7 +7,7 @@ import org.springframework.web.server.ServerWebExchange;
 import java.util.function.Predicate;
 
 /**
- * 跳转rbac的方法
+ * 自定义跳转rbac的方法，然后再配置文件中即可使用
  */
 @Component
 public class RbacAuthRoutePredicateFactory

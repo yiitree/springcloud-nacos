@@ -1,4 +1,4 @@
-package com.zr.bservice.gateway;
+package com.zr.bservice.gateway.filter;
 
 import io.netty.handler.codec.http.HttpMethod;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

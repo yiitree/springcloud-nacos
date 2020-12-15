@@ -1,6 +1,6 @@
 package com.zr.bservice.gateway.jwt.utils;
 
-import com.zimug.dongbb.cloud.server.gateway.jwt.model.JwtProperties;
+import com.zr.bservice.gateway.jwt.model.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -9,6 +9,9 @@ import reactor.core.publisher.Mono;
 
 import static org.springframework.web.reactive.function.BodyInserters.fromObject;
 
+/**
+ * 添加流量卫士，设置自定义的流量拦截返回内容
+ */
 public class MySentinelBlockHandler implements BlockRequestHandler {
 
   @Override

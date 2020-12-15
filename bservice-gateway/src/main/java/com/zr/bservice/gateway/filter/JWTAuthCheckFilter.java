@@ -1,10 +1,10 @@
-package com.zr.bservice.gateway.jwt;
+package com.zr.bservice.gateway.filter;
 
 import com.alibaba.fastjson.JSON;
-import com.zimug.dongbb.cloud.server.gateway.exception.AjaxResponse;
-import com.zimug.dongbb.cloud.server.gateway.exception.CustomExceptionType;
-import com.zimug.dongbb.cloud.server.gateway.jwt.model.JwtProperties;
-import com.zimug.dongbb.cloud.server.gateway.jwt.utils.JwtTokenUtil;
+import com.zr.bservice.gateway.jwt.exception.AjaxResponse;
+import com.zr.bservice.gateway.jwt.exception.CustomExceptionType;
+import com.zr.bservice.gateway.jwt.model.JwtProperties;
+import com.zr.bservice.gateway.jwt.utils.JwtTokenUtil;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -57,7 +57,7 @@ public class JWTAuthCheckFilter {
         //从JWT中解析出当前用户的身份（userId），并继续执行过滤器链，转发请求
         ServerHttpRequest mutableReq = serverHttpRequest
                 .mutate()
-                .header("userId", jwtTokenUtil.getUsernameFromToken(jwtToken))
+                .header("userName", jwtTokenUtil.getUsernameFromToken(jwtToken))
                 .build();
         ServerWebExchange mutableExchange = exchange.mutate().request(mutableReq).build();
         return chain.filter(mutableExchange);

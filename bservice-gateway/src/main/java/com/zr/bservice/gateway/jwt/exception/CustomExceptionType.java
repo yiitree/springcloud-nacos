@@ -1,4 +1,4 @@
-package com.zr.bservice.gateway.exception;
+package com.zr.bservice.gateway.jwt.exception;
 
 public enum CustomExceptionType {
     USER_INPUT_ERROR(400,"用户输入异常"),

@@ -32,7 +32,8 @@ public class MyAuthenticationTokenFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
 
-        String userId = request.getHeader("userId");
+        // 经过网关后，网关会在头信息添加用户名称， 根据用户名称查询用户权限，然后再每个微服务中添加权限校验
+        String userId = request.getHeader("userName");
         if(!StringUtils.isEmpty(userId)){
 
             UserDetails userDetails = myUserDetailsService.loadUserByUsername(userId);

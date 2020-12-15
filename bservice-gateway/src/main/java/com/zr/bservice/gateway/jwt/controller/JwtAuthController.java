@@ -1,9 +1,9 @@
 package com.zr.bservice.gateway.jwt.controller;
 
 
-import com.zr.bservice.gateway.exception.AjaxResponse;
-import com.zr.bservice.gateway.exception.CustomException;
-import com.zr.bservice.gateway.exception.CustomExceptionType;
+import com.zr.bservice.gateway.jwt.exception.AjaxResponse;
+import com.zr.bservice.gateway.jwt.exception.CustomException;
+import com.zr.bservice.gateway.jwt.exception.CustomExceptionType;
 import com.zr.bservice.gateway.jwt.jpa.SysUser;
 import com.zr.bservice.gateway.jwt.jpa.SysUserRepository;
 import com.zr.bservice.gateway.jwt.model.JwtProperties;

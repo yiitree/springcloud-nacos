@@ -1,4 +1,4 @@
-package com.zr.bservice.gateway.exception;
+package com.zr.bservice.gateway.jwt.exception;
 
 public class CustomException extends RuntimeException {
     //异常错误编码
@@ -8,8 +8,7 @@ public class CustomException extends RuntimeException {
 
     private CustomException(){}
 
-    public CustomException(CustomExceptionType exceptionTypeEnum,
-                           String message) {
+    public CustomException(CustomExceptionType exceptionTypeEnum, String message) {
         this.code = exceptionTypeEnum.getCode();
         this.message = message;
     }

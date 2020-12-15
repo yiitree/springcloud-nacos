@@ -43,7 +43,7 @@ public class MyWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter
 
         //RBAC权限控制级别的接口权限校验
         http.authorizeRequests().anyRequest()
-          .access("@rabcService.hasPermission(request,authentication)");
+          .access("@rbacService.hasPermission(request,authentication)");
     }
 
     @Override

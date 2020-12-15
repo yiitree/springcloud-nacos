@@ -13,7 +13,7 @@ spring:
     database: mysql
     show-sql: true
   application:
-    name: zimug-server-gateway
+    name: nacos-server-gateway
   cloud:
     # 对服务进行限流
     sentinel:
@@ -29,19 +29,19 @@ spring:
       discovery:
         locator:
           enabled: true
-      # 第一种：配置文件形式转发
+      # 第一种：配置文件形式转发跳转（在结合配置中心的时候，可以实现热修改）
       routes:
         # 转发规则名称
         - id: rbsc-service
           # 要跳转的路径 lb://<服务注册名称>
           # uri: http://localhost:8401/
           uri: lb://aservice-rbac
-          # 跳转条件
+          # 使用自定义的跳转条件
           predicates:
             - name: RbacAuth
               args:
                 flag: rbac
-          # 自定义过滤器
+          # 自定义过滤器（设置指定ip访问）
           filters:
             - name: IPForbid
               args:
